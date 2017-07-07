@@ -19,10 +19,8 @@
 		<aspectj.version>1.8.9</aspectj.version>
 		<mail.version>1.5.6</mail.version>
 		<gson.version>2.6.2</gson.version>
-		<groupId>junit</groupId>
-		<artifactId>junit</artifactId>
+		<mysql.version>5.1.29</mysql.version>
 		<version>4.12</version>
-		<scope>test</scope>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -206,7 +204,22 @@
 			<artifactId>netty</artifactId>
 			<version>3.2.10.Final</version>
 		</dependency>
-
+		<!-- mysql驱动包 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.16</version>
+		</dependency>
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>

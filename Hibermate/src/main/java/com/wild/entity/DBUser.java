@@ -22,6 +22,17 @@ public class DBUser	implements Serializable	{
 		// TODO	Auto-generated constructor stub
 	}
 
+	
+	public DBUser(int userId, String username, String createdBy,
+			Date createdDate) {
+		super();
+		this.userId = userId;
+		this.username = username;
+		this.createdBy = createdBy;
+		this.createdDate = createdDate;
+	}
+
+
 	public int getUserId() {
 		return userId;
 	}

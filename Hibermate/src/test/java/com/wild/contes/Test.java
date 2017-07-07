@@ -3,25 +3,25 @@ package com.wild.contes;
 import java.util.Date;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 import com.wild.entity.DBUser;
-import com.wild.other.HibernateUtil;
 
 public class Test {
 	public static void main(String[] args) {
-		System.out.println("Maven + Hibernate + Oracle");
-		Session session = HibernateUtil.getSessionFactory().openSession();
-
-		session.beginTransaction();
-		DBUser user = new DBUser();
-
-		user.setUserId(101);
-		user.setUsername("superman");
-		user.setCreatedBy("system");
-		user.setCreatedDate(new Date());
-
-		session.save(user);
-		session.getTransaction().commit();
+		Configuration config = new Configuration();
+		config.configure("hibernate.cfg.xml");
+		// 创建sessionFactory对象
+		SessionFactory sf = config.buildSessionFactory();
+		// 打开session，操作数据库
+		Session session = sf.openSession();
+		// 开启事务
+		Transaction tran = session.beginTransaction();
+		DBUser user = new DBUser(111, "Z", "JINAN", new Date());
 		System.out.println(user);
+		session.save(user);
+		tran.commit();
 	}
 }
