@@ -19,7 +19,7 @@ public class Test {
 		Session session = sf.openSession();
 		// 开启事务
 		Transaction tran = session.beginTransaction();
-		DBUser user = new DBUser(111, "Z", "JINAN", new Date());
+		DBUser user = new DBUser(121, "Z", "JINAN", new Date());
 		System.out.println(user);
 		session.save(user);
 		tran.commit();

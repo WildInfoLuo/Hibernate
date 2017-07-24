@@ -38,7 +38,7 @@ CREATE TABLE `operator` (
 --
 -- Dumping data for table `operator`
 --
-
+select * from `operator`;
 /*!40000 ALTER TABLE `operator` DISABLE KEYS */;
 INSERT INTO `operator` (`optID`,`optName`,`password`,`isExpired`,`isAdmin`) VALUES 
  ('A0030',NULL,'111111',1,1),
